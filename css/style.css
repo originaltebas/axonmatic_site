@@ -1,136 +1,212 @@
-.navbar {
-  background-color: transparent;
-  border-color: transparent;
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background: #f1f1f2;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	margin: 0 0 50px; /* bottom = footer height */
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Montserrat', sans-serif; font-weight:700;
+	text-transform: uppercase;
+	letter-spacing: 2px
+}
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, select:focus, .uneditable-input:focus {
+	border-color: #bd9b60;
+	box-shadow: none;
+	outline: 0 none !important;
+}
+p {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif; font-weight:300;
+
+	letter-spacing: 1px
+}
+header {
+	background: #1a1d25;
+	padding: 10px 0;
+}
+header .logo {
+	max-width: 120px;
+}
+.jumbotron {
+	width: 100%;
+	min-height: 450px;
+	background: url('https://s122939.gridserver.com/clients/conversant/images/driving.jpg') center center;
+	background-size: cover;
+	opacity: 1;
+	display: table;
+	width: 100%;
+	position: relative;
+	border-radius: 0px;
+	color: white;
+	text-transform: uppercase;
+	margin: 0;
+	-webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 85%);
+  clip-path: url(#poly);
+	overflow: hidden;
+  
+}
+.jumbotron h1 {
+	font-size: 50px;
+}
+.jumbotron h2 {
+	font-size: 18px;
+	margin: 0;
+}
+#video-bg {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	min-width: 100%;
+	height: auto;
+	min-height: 100%;
+	background: #000;
+	z-index: -1;
+	/*background-size: cover;*/
+	opacity: 1;
+}
+#black {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: auto;
+	min-width: 100%;
+	height: auto;
+	min-height: 100%;
+	background: rgba(26,29,37,0.8);
+}
+#main-wrapper {
+	margin-top: 0;
+}
+.main-content {
+	padding-top: 25px;
+}
+.main-content .white-box {
+	padding: 25px;
+	margin: 25px 0;
+	background: #fff
+}
+.main-content ul {
+	list-style: initial;
+	margin-left: 15px
+}
+.main-content .final-cta {
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif; font-weight:700;
+	text-transform: uppercase
+}
+.form-container {
+	background: #fff;
+	padding: 25px;
+	border-radius: 3px;
+	margin-top: -100px;
+}
+.form-container div {
+	margin: 20px 0;
+}
+.form-container input, .form-container select {
+	border: none;
+	border-bottom: 1px solid #ccc;
+	font-family: 'Open Sans', sans-serif; font-weight:300;
+	font-size: 12px;
+	padding: 3px 0;
+	border-radius: 0px;
+	box-shadow: none;
+	-webkit-appearance: none;
+	color: #000;
+	letter-spacing: 1px
+}
+.form-container option {
+	margin: 0;
+}
+.form-container label {
+	display: none
+}
+.form-container h4 {
+	margin: 0;
+}
+.form-container .placeholder {
+	color: #000 !important;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif; font-weight:300;
+}
+select option:first-child {
+	display: none;
+}
+::-webkit-input-placeholder {
+ color: #000 !important;
+ text-transform:uppercase;
+letter-spacing:1px;
+font-size:12px;
+font-family:Gibson-Light;
+}
+.form-container .btn-primary {
+	background: #00af66;
+	padding: 15px 0;
+	border-radius: 3px;
+	font-family: 'Montserrat', sans-serif; font-weight:700;
+	text-transform: uppercase;
+	color: white
 }
 
-.navbar .nav > li > a{
-  color: white;
+:-moz-placeholder { /* Firefox 18- */
+ color: #000 !important;
+ text-transform:uppercase;
+letter-spacing:1px;
+font-size:12px;
+font-family: 'Open Sans', sans-serif; font-weight:300
 }
 
-.navbar .navbar-header > a{
-  color: white;
+::-moz-placeholder {  /* Firefox 19+ */
+ color: #000 !important;
+ text-transform:uppercase;
+letter-spacing:1px;
+font-size:12px;
+font-family: 'Open Sans', sans-serif; font-weight:300
 }
 
-#header-cont {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 500px;
-  background-color:#03A9F4;
-  color: white;
+:-ms-input-placeholder {
+ color: #000 !important;
+ text-transform:uppercase;
+letter-spacing:1px;
+font-size:12px;
+font-family: 'Open Sans', sans-serif; font-weight:300
 }
-
-#know-button {
-  margin-top: 20px;
-  background-color: transparent;
-  color: white;
-  border-color: white;
-  border-radius: 30px;
-  font-size: 12px;
-  font-weight: 700;
-}
-
-#know-button:hover {
-  background-color: #fff;
-  color: #03A9F4;
-}
-
-#me-cont {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  background-color: #4CAF50; 
-  color: white;
-  padding-bottom: 50px;
-}
-
-#me-cont #team {
-  margin-top: 30px;
-}
-
-#works-cont {
-  background-color: #d50000;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  color: white;
-}
-
-#works-cont .row {
-  margin-top: 30px;
-  color: grey;
-}
-
-#works-cont h3{
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-#works-cont h5{
-  margin-top: 2px;
-  margin-bottom: 0px;
-}
-
-.box {
-  background-color: white;
-  border-radius: 2px;
-  padding-bottom: 10px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  transition: all 0.2s ease-in-out;
-}
-
-.box:hover {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-#contact-cont {
-  background-color: #9C27B0;
-  color: white;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-#contact-form {
-
-}
-
-#social {
-  margin-top: 70px;
-  margin-bottom: 30px;
-}
-
-#social h3 {
-  margin: 1px 0px 1px 0px;
-}
-
 footer {
-  background-color: #9C27B0;
-  color: white;
+	color: #999;
+	position: absolute;
+	background: rgba(26,29,37,1);
+	left: 0;
+	bottom: 0;
+	height: 40px;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 12px;
 }
 
-.typed {
-  font-weight: bold;
+@media (min-width: 320px) and (max-width: 480px) {
+.jumbotron {
+	min-height: 460px;
+	padding: 5px 15px;
 }
-
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
+.jumbotron h1 {
+	font-size: 30px;
 }
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+.jumbotron h2 {
+	font-size: 16px;
 }
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
+.form-container {
+	margin-top: 20px;
 }
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
+} /**** END 320 and 480 ****/
