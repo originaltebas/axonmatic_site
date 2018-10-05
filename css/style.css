@@ -20,7 +20,12 @@
 
   p {
     font-size: 20px;
-    color: #484848;
+    color: #efefef;
+    white-space: pre-line;
+  }
+
+  .pnormal {
+color: #2F2F2F;
   }
 
   .section {
@@ -87,7 +92,9 @@
   }
 
   .nav-brand img {
-    width: 50px;
+    border-radius: 8px;
+    max-width:60%;
+    height: auto;
   }
 
   .fa-bars {
@@ -111,21 +118,27 @@
   }
 
   .header-links {
-   position: fixed;
-  width: 100%;
-  z-index: 500;
+    opacity: 0.5;
+    background-color: #000000;
+    position: fixed;
+    width: 100%;
+    z-index: 500;
+    height: 95px;
   }
 
   .header-links li {
     color: white;
+    font-weight: bold;
     display: inline;
     float: right;
-    padding: 15px;
+    padding:15px;
+    padding-top: 35px;
     font-size: 16px;
   }
 
   .header-links a {
-    color: #757575;
+    color: white;
+    transition:  all 0.2s ease-in;
     -webkit-transition: all 0.2s ease-in;
   }
 
@@ -154,7 +167,7 @@
 
 
   .nav-links a {
-    color: #FFFFFF;
+    color: white;
     font-size: 30px;
     line-height: 2.5;
     font-weight: bold;
@@ -201,16 +214,28 @@
   /* main header section */
 
   .opaque-bg {
+    opacity: 0.5;
+    background-color: #000000;
     margin-left: auto;
     margin-right: auto;
     max-width: 380px;
     padding: 1px 1px 5px 5px;
   }
 
-  .aboutme {
-    background: url("https://s3-us-west-2.amazonaws.com/files.bradengelhardt.com/brad-bg-main.jpg") no-repeat;
-    background-size: cover;
+  .holder {
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 17.4px !important;
   }
+
+  .aboutme {
+    background: url("/assets/ecommerce_banner.png") no-repeat;
+    background-size: cover;
+    filter:opacity(0.5);
+    opacity:(0.5);
+    filter: brightness(70%);
+  }
+
 
   .aboutme p {
     color: white;
@@ -228,6 +253,7 @@
     cursor: pointer;
     position: absolute;
     opacity: 0;
+    transition: 1.2s ease;
     -webkit-transition: 1.2s ease;
   }
 
@@ -393,6 +419,12 @@
     left: 45px !important;
   }
 
+  #fp-nav {
+    background: whitesmoke;
+    opacity: (0.5);
+    filter:opacity(0.5);
+  }
+
   #fp-nav ul li a span, .fp-slidesNav ul li a span{
     background: rgba(0, 0, 0, 0.62) !important;
   }
@@ -522,7 +554,7 @@
 
     .header-links {
       display: none;
-    }   
+    }
   }
 
   /* mobile styles */
@@ -557,7 +589,7 @@
     height: 100%;
     width: 6px;
     display: inline-block;
-    
+
     -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
     animation: sk-stretchdelay 1.2s infinite ease-in-out;
   }
@@ -583,15 +615,15 @@
   }
 
   @-webkit-keyframes sk-stretchdelay {
-    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
     20% { -webkit-transform: scaleY(1.0) }
   }
 
   @keyframes sk-stretchdelay {
-    0%, 40%, 100% { 
+    0%, 40%, 100% {
       transform: scaleY(0.4);
       -webkit-transform: scaleY(0.4);
-    }  20% { 
+    }  20% {
       transform: scaleY(1.0);
       -webkit-transform: scaleY(1.0);
     }
@@ -610,7 +642,7 @@
     animation: 1s blink step-end infinite;
   }
 
-@keyframes "blink" {
+@keyframes blink {
   from, to {
     color: transparent;
   }
@@ -628,7 +660,7 @@
   }
 }
 
-@-webkit-keyframes "blink" {
+@-webkit-keyframes blink {
   from, to {
     color: transparent;
   }
@@ -677,4 +709,22 @@
   -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
           border-radius: 4px;
+}
+
+.paddheader {
+  margin-top:100px;
+}
+
+.imgtable {
+  max-width: 150px;
+  height: auto;
+}
+
+.tittable {  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tittable h3 {
+  max-width: 50%;
 }

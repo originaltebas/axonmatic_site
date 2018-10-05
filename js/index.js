@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-  // typing animation
   (function($) {
     $.fn.writeText = function(content) {
         var contentArray = content.split(""),
@@ -12,15 +11,15 @@ $(document).ready(function() {
             }
         }, 80);
     };
-    
+
   })(jQuery);
 
-  // input text for typing animation 
-  $("#holder").writeText("WEB DESIGNER + FRONT-END DEVELOPER");
+  // input text for typing animation
+  $("#holder").writeText("GESTION INTEGRAL DE TIENDAS ONLINE. SÓLO TE PREOCUPAS DE TU PRODUCTO, NOSOTROS HACEMOS EL RESTO.");
 
   // initialize wow.js
   new WOW().init();
-    
+
   // Push the body and the nav over by 285px over
   var main = function() {
     $('.fa-bars').click(function() {
@@ -56,22 +55,20 @@ $(document).ready(function() {
   };
 
   $(document).ready(main);
-  
+
   // initiate full page scroll
 
   $('#fullpage').fullpage({
     scrollBar: true,
     responsiveWidth: 400,
     navigation: true,
-    navigationTooltips: ['home', 'about', 'portfolio', 'contact', 'connect'],
-    anchors: ['home', 'about', 'portfolio', 'contact', 'connect'],
+    navigationTooltips: ['inicio', 'necesidades', 'servicios', 'contacto', 'conexión'],
+    anchors: ['inicio', 'necesidades', 'servicios', 'contacto', 'conex'],
     menu: '#myMenu',
-    fitToSection: false,
+    fitToSection: true,
 
     afterLoad: function ( anchorLink, index){
       var loadedSection = $(this);
-
-
       //using index
       if(index==1){
         /* add opacity to arrow */
@@ -81,29 +78,32 @@ $(document).ready(function() {
         $('.header-links a').each(function(){
           $(this).css('color','white')
         });
-        $('.header-links').css("background-color","transparent");
+        $('.header-links').css("background-color","black");
       }
 
-      else if(index!=1){
-        $('.header-links a').each(function(){
+      else if (index != 1) {
+        $('.fa-chevron-down').each(function(){
+          $(this).css('opacity','1')
+        });
+        $('.header-links a').each(function () {
           $(this).css('color','black')
         });
         $('.header-links').css('background-color', 'white');
       }
 
       //using index
-      if(index == 2){
+   //   if(index == 2){
 
         /* animate skill bars */
-        $('.skillbar').each(function(){
-          $(this).find('.skillbar-bar').animate({
-            width:jQuery(this).attr('data-percent')
-          },2500);
-        });
-      }
+     //   $('.skillbar').each(function(){
+       //   $(this).find('.skillbar-bar').animate({
+         //   width:jQuery(this).attr('data-percent')
+       //   },2500);
+     //   });
+    //  }
     }
   });
- 
+
 
   // move section down one
   $(document).on('click', '#moveDown', function(){
@@ -111,15 +111,20 @@ $(document).ready(function() {
   });
 
   // fullpage.js link navigation
-  $(document).on('click', '#skills', function(){
+ $(document).on('click', '#inicio', function(){
+  $.fn.fullpage.moveTo(1);
+});
+
+  // fullpage.js link navigation
+  $(document).on('click', '#necesidades', function(){
     $.fn.fullpage.moveTo(2);
   });
 
-  $(document).on('click', '#projects', function(){
+  $(document).on('click', '#servicios', function(){
     $.fn.fullpage.moveTo(3);
   });
 
-  $(document).on('click', '#contact', function(){
+  $(document).on('click', '#contacto', function(){
     $.fn.fullpage.moveTo(4);
   });
 
@@ -184,7 +189,7 @@ $(document).ready(function() {
         if (data.responseText !== '') {
           $(formMessages).text(data.responseText);
         } else {
-          $(formMessages).text('Oops! An error occured and your message could not be sent.');
+          $(formMessages).text('Ups! ha ocurrido un error y no se ha podido enviar el mensaje.');
         }
       });
 
