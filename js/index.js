@@ -62,8 +62,8 @@ $(document).ready(function() {
     scrollBar: true,
     responsiveWidth: 400,
     navigation: true,
-    navigationTooltips: ['inicio', 'necesidades', 'servicios', 'contacto', 'conexión'],
-    anchors: ['inicio', 'necesidades', 'servicios', 'contacto', 'conex'],
+    navigationTooltips: ['inicio', 'necesidades', 'servicios', 'contacto', 'rrss y tel'],
+    anchors: ['inicio', 'necesidades', 'servicios', 'contacto', 'rrss'],
     menu: '#myMenu',
     fitToSection: true,
 
@@ -126,6 +126,10 @@ $(document).ready(function() {
 
   $(document).on('click', '#contacto', function(){
     $.fn.fullpage.moveTo(4);
+  });
+
+  $(document).on('click', '#rrss', function(){
+    $.fn.fullpage.moveTo(5);
   });
 
   // smooth scrolling
